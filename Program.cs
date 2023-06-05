@@ -22,9 +22,10 @@ string[] ArrayStringCreate (int arrayLenght)
 string[] ArrayStringModificate(string[] array)
 {
     int count = 0;
+    int limitLength = 4;
     for (int i = 0; i < array.Length; i++)
     {
-        if (array[i].Length < 4) count++;
+        if (array[i].Length < limitLength) count++;
     }
     string[] resultArray = new string[1];
     if (count > 0)
@@ -33,7 +34,7 @@ string[] ArrayStringModificate(string[] array)
         count = 0;
         for (int i = 0; i < array.Length; i++)
         {
-            if (array[i].Length < 4) 
+            if (array[i].Length < limitLength) 
             {
                 resultArray[count] = array[i];
                 count++;
